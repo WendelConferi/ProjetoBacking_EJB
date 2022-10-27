@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	<ui:define name="head">
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h1 class="aw-page-title">Cadastro times</h1>
+
+		<h:form id="frm">
+
+			<p:toolbar>
+				<p:toolbarGroup>
+					<p:commandButton id="salvar2" value="Salvar" update="frm"
+						action="#{timesFormBacking.actionSalvar()}" />
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<p:panelGrid columns="2" layout="grid"
+				styleClass="panelgrid-noborder"
+				columnClasses="ui-grid-col-3, ui-grid-col-1">
+
+				<p:outputLabel value="Código do time:" for="numSeq" />
+				<p:inputText id="numSeq" widgetVar="numSeq" disabled="true"
+					value="#{timesFormBacking.numSeq}">
+				</p:inputText>
+
+				<p:outputLabel value="Nome do time:" for="desTime" />
+				<p:inputText id="desTime" widgetVar="desTime"
+					value="#{timesFormBacking.desTime}">
+				</p:inputText>
+
+				<p:outputLabel value="Nome técnico:" />
+				<p:inputText id="desTecnico" widgetVar="desTecnico"
+					value="#{timesFormBacking.desTecnico}">
+				</p:inputText>
+
+				<p:outputLabel value="Tipo:" for="indTipo" />
+				<p:inputText id="indTipo" widgetVar="indTipo"
+					value="#{timesFormBacking.indTipo}">
+				</p:inputText>
+			</p:panelGrid>
+
+			<p:toolbar>
+				<p:toolbarGroup>
+					<p:commandButton id="salvar1" value="Salvar"
+						action="#{timesFormBacking.actionSalvar()}" />
+				</p:toolbarGroup>
+			</p:toolbar>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

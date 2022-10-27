@@ -1,0 +1,74 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	<ui:define name="head">
+		<style type="text/css">
+.nba-grid {
+	width: 100%;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.ui-scrollpanel-content p:first-child {
+	margin: 0;
+}
+</style>
+	</ui:define>
+
+	<ui:define name="content">
+		<h1 class="aw-page-title">Times</h1>
+
+		<h:form id="frm">
+			<p:spacer height="15%" width="15px"></p:spacer>
+
+
+			<p:dataTable value="#{timesBacking.timesParaSerMostradoNaTela}"
+				var="row" id="tableTimes" emptyMessage="Nenhum registro encontrado"
+				style="margin-top: 20px">
+
+				<p:column headerText="Descrição">
+					<h:outputText value="#{row.desTime}" />
+				</p:column>
+
+				<p:column headerText="Técnico">
+					<h:outputText value="#{row.desTecnico}" />
+				</p:column>
+
+				<p:column headerText="Tipo">
+					<h:outputText value="#{row.indTipo}" />
+				</p:column>
+
+
+				<p:column headerText="Codigoo">
+					<h:outputText value="#{row.numSeq}" />
+				</p:column>
+
+				<p:column headerText="Editar">
+					<div align="center">
+						<p:commandButton id="btnEditar" icon="ui-icon-pencil"
+							action="#{timesBacking.actionFormEdicao(row)}">
+						</p:commandButton>
+					</div>
+				</p:column>
+				
+				<p:column headerText="Remover">
+					<div align="center">
+						<p:commandButton id="btnRemover" icon="ui-icon-pencil"
+							action="#{timesBacking.actionRemover(row)}" update="tableTimes">
+						</p:commandButton>
+					</div>
+				</p:column>
+				
+
+			</p:dataTable>
+
+			<p:commandButton id="addTime" icon="ui-icon-plus"
+				value="Adicionar time" action="#{timesBacking.actionForm()}" />
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
