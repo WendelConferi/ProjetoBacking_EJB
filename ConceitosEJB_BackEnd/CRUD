@@ -1,0 +1,95 @@
+1-entidade
+2-EJB
+3-como montar a URL (ip/@path do ejb/@path do metodo)
+
+4-o que é request e o que ~e response,   e o que é objeto request customizado e repsonse customizado
+mesmas perguntas para response
+
+5-em.persist
+6-em.merge (carregar todo o objeto pelo em.find antes)
+7-em.remove (carregar todo o objeto pelo em.find antes)
+8.em.createNativeQuery
+9-em.createQuery
+10-o que é vo
+
+
+
+
+
+usar isso:
+{
+    "mensagemInformativa": "Olá, foi removido!!",
+}
+
+JSON
+-----
+
+
+--
+nao usar isso:
+
+Olá, foi removido!! 
+TEXT/PLAIN
+----
+
+
+CRUD é criar, ler, atualizar e deletar registros/linhas/rows
+inserir
+remover
+buscar
+atualizar
+
+isnert
+delete
+select
+update
+
+
+CRUD=cadastro
+CREATE=insert
+READ=select
+UPDATE=update
+DELETE=delete
+
+
+
+
+{
+    "teams": [
+        {
+            "numSeq": 2,
+            "desTime": "Inter SCB",
+            "indTipo": 2
+        },
+        {
+            "numSeq": 3,
+            "desTime": "Lakers",
+            "indTipo": 1
+        },
+        {
+            "numSeq": 4,
+            "desTime": "CB",
+            "indTipo": 1
+        },
+        {
+            "numSeq": 5,
+            "desTime": "Barueri",
+            "indTipo": 3
+        },
+        {
+            "numSeq": 6,
+            "desTime": "Seqs",
+            "indTipo": 3
+        },
+        {
+            "numSeq": 7,
+            "desTime": "Flamengo",
+            "indTipo": 2
+        },
+        {
+            "numSeq": 1,
+            "desTime": "Juventude FC",
+            "indTipo": 2
+        }
+    ]
+}

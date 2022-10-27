@@ -1,0 +1,27 @@
+1-entidade
+2-EJB
+3-como montar a URL (ip/@path do ejb/@path do metodo)
+
+4-o que é request e o que ~e response,   e o que é objeto request customizado e repsonse customizado
+mesmas perguntas para response
+
+5-em.persist
+6-em.merge (carregar todo o objeto pelo em.find antes)
+7-em.remove (carregar todo o objeto pelo em.find antes)
+8.em.createNativeQuery
+9-em.createQuery
+10-o que é vo
+
+---------------------------------------------------
+1 - Entidade é a representação de uma tabela em uma classe.
+2 - EJB é onde possui os metodos e serviços(ações), formam a URL.
+3 - O '@path' indica a url do serviço, sempre que for fazer um novo precisa do @path
+4 - Request é a requisição que é enviada para o serviço em formato json, Response é a resposta do serviço em formato Json;
+Usando a entidade para criar um objeto com a requisição ou response.
+
+5 - em.persist -> Inserindo o objeto(entidade) na tabela.
+6 - em.merge -> Atualizando a tabela com o objeto(entidade) que foi carregado pelo em.find
+7 - em.remove -> Removendo na tabela o objeto(entidade) que foi carregado pelo em.find
+8 - em.createNativeQuery -> Criando um objeto que é sql nativo, assim podendo usar metodos em cima de sql nele.
+9 - em.createQuery -> Criando um objeto com sql do java, assim podendo usar metodos em cima dele.
+10 - VO é uma classe para transitar as informações dos atributos ou derivados.
